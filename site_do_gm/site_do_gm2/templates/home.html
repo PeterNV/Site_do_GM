@@ -1,0 +1,572 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8>">
+        <title>GERAÇÃO MARTE</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    {% load static %}
+    <style>
+        
+        body {
+    background-image: url("{% static 'imagens/GMBackgroundMenuInicial.png' %}")
+    }
+    #News1{
+        height: 413px;
+      
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        scale: 0.55;
+        cursor: pointer;
+        position: relative;
+        bottom: 10%;
+    }
+    #News1Tit{
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        font-size: 25px;
+        position: relative;
+       
+        bottom:15%;
+    }
+    #News1Desc{
+        text-align: center;
+        font-size: 25px;
+        position: relative;
+        
+        bottom:21%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #News2{
+        height: 413px;
+      
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        scale: 0.55;
+        cursor: pointer;
+        border: 1px solid transparent;
+        position: relative;
+        bottom: 31%;
+    }
+    #News2Tit{
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        font-size: 25px;
+        position: relative;
+        
+        bottom:15%;
+    }
+    #News2Desc{
+        text-align: center;
+        font-size: 25px;
+        position: relative;
+        
+        bottom:21%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #News3{
+        height: 413px;
+       
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        scale: 0.55;
+        cursor: pointer;
+        border: 1px solid transparent;
+        position: relative;
+        bottom: 52%;
+    }
+    #News3Tit{
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        font-size: 25px;
+        position: relative;
+        
+        bottom:15%;
+    }
+    #News3Desc{
+       text-align: center;
+        font-size: 25px;
+        position: relative;
+       
+        bottom:21%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #News1Img{
+        height: 413px;
+        width: 640px;
+        border-radius: 1em;
+    }
+    #News2Img{
+        height: 413px;
+        width: 640px;
+        border-radius: 1em;
+    }
+    #News3Img{
+        border-radius: 1em;
+        height: 413px;
+        width: 640px;
+    }
+    td{
+        background-color: white;
+        text-align: center;
+        
+        border-radius: 1em;
+    }
+    tr{
+        transition-duration: .4s;
+        opacity: 0.85;
+    }
+    tr:hover{
+        opacity: 1;
+    }
+        #NavTop{
+            text-align: center;
+            height: 85px;
+            width: 1750px;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 25em;
+            background-color: transparent;
+            /*border: 3px solid white;*/
+            position: relative;
+            top: 15px;
+        }
+
+        .ButNavTop{
+            background-color: transparent;
+            color: white;
+            font-weight: 550;
+            font-size: 15.5px;
+            position: relative;
+            border-color: transparent;
+            cursor: pointer;
+            margin-left: auto;
+            margin-right: auto;
+            transition-duration: .4s;
+            height: 50px;
+            position: relative;
+            top: 35%;
+            cursor: pointer;
+        }
+        #LoginBut{
+            color: rgb(12, 102, 238);
+        }
+        #SignBut{
+            height: 50px;
+            width: 115px;
+            border: 5px solid rgb(12, 102, 238);
+            background-color: rgb(12, 102, 238);
+            border-radius: 0.5em;
+            
+        }
+
+        #LogoPrincipal{
+            border-radius: 50%;
+           
+            width: 155px;
+            height: 90px;
+        }
+        #LogoPrincipalMenu{
+            border-radius: 50%;
+           
+            width: 555px;
+            height: 350px;
+            position: relative;
+            left: 1150px;
+            bottom: 315px;
+        }
+        #LogoMain{
+            height: 125px;
+            width: 125px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            bottom: 355px;
+            text-align: center;
+        }
+
+        #BemVindoAoGM{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+            right: 105px;
+            font-size: 65px;
+        }
+
+        #ObjetivoGM{
+            width: 525px;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: relative;
+            right: 105px;
+            bottom: 18px;
+            font-size: 22px;
+        }
+        #ObjetivoGM1{
+            width: 745px;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: relative;
+            right: 105px;
+            top: 22px;
+            font-size: 18px;
+        }
+        #ParticipeDaMissao{
+            width: 175px;
+            height: 50px;
+            border-radius: 0.5em;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            font-size: 17px;
+            background-color: rgb(20, 34, 56);
+            border: 1px solid rgb(20, 34, 56);
+            cursor: pointer;
+            position: relative;
+            right: 105px;
+            bottom: 18px;
+        }
+        #SejaUmParceiro{
+            width: 175px;
+            height: 50px;
+            border-radius: 0.5em;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            font-size: 17px;
+            background-color: transparent;
+            border: 1px solid white;
+            cursor: pointer;
+            position: relative;
+            right: 95px;
+            bottom: 18px;
+        }
+        #QuemSomosTitulo{
+             color: white;
+             font-family: Arial, Helvetica, sans-serif;
+             position: absolute;
+             left: 10%;
+             font-size: 45px;
+        }
+        
+        #QuemSomosPara{
+            width: 500px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            position: absolute;
+            left: 10%;
+            top: 15%;
+            font-size: 18px;
+            text-align: justify;
+        }
+        #TituloIntro{
+            height: 275px;
+            width: 925px;
+            position: absolute;
+            font-size: 20px;
+            left: 14.5%;
+            right: 18.5%;
+            top: 20%;
+            text-align: left;
+        }
+        
+       
+        #NavBottom{
+            height: 52%;
+            background-color: rgb(17, 29, 48);
+            width: 100%;
+            position: absolute;
+            top: 118%;
+            right: 0%;
+        }
+        #NavBottomDois{
+            height: 70%;
+            background-color: black;
+            width: 100%;
+            position: absolute;
+            top: 170%;
+            right: 0%;
+        }
+        #Noticias{
+            height: 100%;
+            width: 100%;
+                
+            text-align: center;
+        }
+        #NavBottomTres{
+            height: 100%;
+            background-color: gray;
+            width: 100%;
+            position: absolute;
+            text-align: center;
+            top: 240%;
+            right: 0%;
+            background-image: url("{% static 'imagens/GMNewsBackground.jpg' %}");
+        }
+        #RequisitosDoAstronauta{
+            width: 100%;
+            height: 100%;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            border-right: 5px solid black;
+            font-size: 21px;
+            position:absolute;
+            bottom: 0%;
+            right: 0%;
+            opacity: 0.65;
+            text-align: justify;
+        }
+        #RequisitosDoAstronauta2{
+            width: 615px;
+            height: 100%;
+            position:absolute;
+            left: 8%;
+            top: 16%;
+        }
+        #NavBottomQuatro{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 323%;
+            right: 0%;
+            
+            background-image: url("{% static 'imagens/AstronautaRequisitos.jpg' %}");
+        }
+        #NavBottomCinco{
+            height: 20%;
+            background-color: white;
+            width: 100%;
+            position: absolute;
+            top: 423%;
+            right: 0%;
+        }
+        #RedesSociaisLink{
+            position: absolute;
+            left: 75%;
+        }
+        #Insta{
+            
+            color: white;
+            font-size: 48px;
+            scale: 0.75;
+            
+        }
+        #InstaBut{
+            height: 48px;
+            width: 48px;
+            
+            text-align: center;
+            border: 5px solid black;
+            background-color: black;
+            border-radius: 50%;
+        }
+        #LinkBut{
+            height: 48px;
+            width: 48px;
+            text-align: center;
+            border: 5px solid black;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0%;
+            left: 55%;
+        }
+        #RedesSociaisTitulo{
+            color: rgb(92, 92, 92);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #GMEmail{
+            font-family: Arial, Helvetica, sans-serif;
+            position: absolute;
+        }
+        #EmailTitulo{
+            color: rgb(92, 92, 92);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #EmailLink{
+            position: absolute;
+            left: 10%;
+        }
+        #UmaNovaEraTit{
+            width: 425px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            position: absolute;
+            left: 20%;
+            font-size: 25px;
+        }
+        #UmaNovaEraDesc{
+            width: 340px;
+            color: white;
+            position: relative;
+            left: 20%;
+            top: 5%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+        }
+        #SejaMembro{
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+    <body>
+        <nav id="NavTop">
+            <img id="LogoPrincipal" alt="Logo do GM" src="{% static 'imagens/LogoGmPng.png' %}" />
+         <button class="ButNavTop" onclick="NewsScroll()">Notícias </button><button class="ButNavTop" onclick="QuemSScroll()">Sobre Nós</button><button class="ButNavTop"><a id="SejaMembro" href="https://forms.gle/fQBGL41wT38kH6pJ8" target="_blank">Seja membro</a></button><button class="ButNavTop">Blog</button><button class="ButNavTop">Nossos Programas</button> <button class="ButNavTop">Pesquisas e publicações</button>
+         <button class="ButNavTop" onclick="AstroScroll()">Requisitos para ser um astronauta</button>  <button class="ButNavTop" id="LoginBut">Log in</button>
+         <button class="ButNavTop" id="SignBut">Sign up</button>
+        </nav><br><br>
+        <div id="TituloIntro">
+            <h1 id="ObjetivoGM1">LEVANDO O HEMISFÉRIO SUL AO PALCO MUNDIAL DA ASTRONÁUTICA</h1>  
+            <h1 id="BemVindoAoGM">Instituto Geração de Marte</h1>
+            <p id="ObjetivoGM">
+                Treinando a Geração de Exploradores Espaciais Enquanto Fazemos Ciência
+            </p><br>
+            <button id="ParticipeDaMissao">Participe da Missão</button> <button id="SejaUmParceiro">Seja um Parceiro</button>
+        </div>
+        <nav id="NavBottomDois">
+            <h3 id="QuemSomosTitulo">Quem somos nós?</h3><br>
+            <p id="QuemSomosPara">
+                No espírito da descoberta e da aventura, acreditamos no poder da exploração do espaço para revelar nosso maior potencial.Partilhamos a paixão pelo desconhecido e a emoção de empurrar fronteiras.
+            </p>
+        </nav>
+        <nav id="NavBottom">
+            <br><br>
+            <h3 id="UmaNovaEraTit">
+                Uma Nova Era para A Exploração Espacial Sul-Americana
+            </h3><br><br><br>
+            
+            <p id="UmaNovaEraDesc">
+                Fundado em 2023 por Juliana Leonet, o Geração de Marte é a primeira comunidade sul-americana dedicada a capacitar e incentivar futuros astronautas cientistas, por meio de missões análogas, pesquisa e educação espacial. Com mais de 300 membros espalhados pelo mundo, estamos rompendo barreiras para garantir que o Hemisfério Sul tenha um papel central na nova era espacial.
+            </p><img id="LogoPrincipalMenu" alt="Logo do GM" src="{% static 'imagens/LogoGmPng.png' %}" />
+            
+        </nav>
+        <nav id="NavBottomTres">
+            <div id="Noticias">
+                <br>
+                <table id="News1">
+                    <tr>
+                        <td>
+
+                       
+                     <img id="News1Img" src="{% static 'imagens/News1.avif' %}">
+                    </td>
+                    <td>
+                        <h2 id="News1Tit">
+                            Geração de Marte no 3° Space Symposium Business
+                        </h2><br>
+                        <p id="News1Desc">
+                            No dia 16/03, a nossa Co-fundadora, CFO e Cientista Chefe, Luísa Santos, esteve presente no 3° Space Symposium Business em São José dos Camp
+                        </p>
+                    </td>
+                    </tr>
+                </table>
+               
+
+
+                <table id="News2">
+                    <tr>
+                        <td>
+
+                       
+                     <img id="News2Img" src="{% static 'imagens/News2.jpg' %}">
+                    </td>
+                    <td>
+                        <h2 id="News2Tit">
+                            Geração de Marte e Habitat Marte Realizam Primeira Missão Análoga Virtual
+
+                        </h2><br>
+                        <p id="News2Desc">
+                            Geração de Marte e Habitat Marte realizam a Primeira Missão Análoga Virtual da Fundação O ano de 2024 começou com uma emocionante jornada...
+                        </p>
+                    </td>
+                    </tr>
+                </table>
+
+
+
+                <table id="News3">
+                    <tr>
+                        <td>
+
+                       
+                     <img id="News3Img" src="{% static 'imagens/News3.avif' %}">
+                    </td>
+                    <td>
+                        <h2 id="News3Tit">
+                           Geração de Marte na Campus Party - O maior evento de tecnologia e inovação do mundo
+
+
+                        </h2><br>
+                        <p id="News3Desc">
+                            No dia 6 de abril de 2023, as aspirantes a astronauta Juliana Leonet e Luísa Santos estiveram presentes no evento da Campus Party em...
+                        </p>
+                    </td>
+                    </tr>
+                </table>
+            </div><br>
+            
+                
+        </nav>
+        <nav id="NavBottomQuatro">
+            <div id="RequisitosDoAstronauta">
+                <div id="RequisitosDoAstronauta2">
+                    <h2>O que é preciso para se tornar um Astronauta da NASA?</h2>
+                   
+                <p>Em algum momento você já sonhou em se tornar um astronauta? Já se imaginou viajando de foguete para Lua ou para Marte? Abaixo está a lista de requisitos que você deve ter para que no futuro possa se tornar um astronauta.</p>
+                <ol>
+                    <li>Seja um cidadão americano.</li><br>
+                    <li>Tenha um mestrado em uma área STEM, incluindo engenharia, ciências biológicas, ciências físicas, ciência da computação ou matemática, de uma instituição credenciada.</li><br>
+                    <li>
+                        Tenha no mínimo três anos de experiência profissional relacionada obtida após a conclusão do curso (ou 1.000 horas de piloto em comando, com pelo menos 850 dessas horas em aeronaves a jato de alto desempenho para pilotos). Para médicos, o tempo de residência pode ser contado para a experiência e deve ser concluído até junho de 2025.
+                    </li><br>
+                    <li>
+                        Seja capaz de completar com sucesso o exame físico de astronauta de voo de longa duração da NASA.
+                    </li><br>
+                    <li>
+                        Para saber mais: <a href="https://www.nasa.gov/humans-in-space/astronauts/become-an-astronaut/" target="_blank">Become An Astronaut</a>|<a target="_blank" href="https://www.youtube.com/watch?v=oXx-nMsyr0w">REQUISITOS para SER ASTRONAUTA da NASA</a>
+                    </li>
+                </ol>
+                </div>
+                
+            </div>
+            
+        </nav>
+        <nav id="NavBottomCinco"><br>
+            <div id="EmailLink">
+                <h2 id="EmailTitulo">E-mail</h2><br>
+                <a id="GMEmail">geracaodemarte@gmail.com</a>
+            </div>
+            <div id="RedesSociaisLink">
+                <h2 id="RedesSociaisTitulo">Redes sociais e E-mail</h2>
+                <div id="InstaBut">
+                    <a   href="https://www.instagram.com/geracao.de.marte?igsh=MWxpZnBvaml2ems5ZQ%3D%3D" target="_blank"><i id="Insta" class="fa fa-instagram" ></i></a></div>
+                    <div id="LinkBut">
+                        <a    href="https://www.linkedin.com/company/gera%C3%A7%C3%A3o-de-marte-futuros-astronautas/" target="_blank"><i id="Insta" class="fa fa-linkedin-square" ></i></a><br>
+                    </div>
+            </div>
+        </nav>
+        <script>
+            function AstroScroll(){
+                 window.scrollTo(0, 2950);
+            }
+            function NewsScroll(){
+                window.scrollTo(0, 2050);
+            }
+            function QuemSScroll(){
+                window.scrollTo(0, 1350);
+            }
+        </script>
+    </body>
+  
+</html>

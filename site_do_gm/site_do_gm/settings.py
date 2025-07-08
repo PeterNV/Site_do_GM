@@ -11,10 +11,13 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
+import sys
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'site_do_gm2', 'templates', 'static'),
+]
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
@@ -72,14 +75,22 @@ WSGI_APPLICATION = 'site_do_gm.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-
+MONGO_DB_URI = "mongodb+srv://GM:GeracaoM126@cluster0.peur7xa.mongodb.net/"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'Dados',
+        'ENFORCE_SCHEMA': False,  # Adicione esta linha
+        'CLIENT': {
+            'host': 'mongodb+srv://GM:GeracaoM126@cluster0.peur7xa.mongodb.net/',
+        }
     }
 }
-
+#MONGOENGINE_USER_DOCUMENT = 'mongoengine.django.auth.User
+AUTHENTICATION_BACKENDS = [
+    'site_do_gm2.backends.MongoDBBackend',  # Caminho correto para o seu backend
+    #'django.contrib.auth.backends.ModelBackend'
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
@@ -115,7 +126,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
