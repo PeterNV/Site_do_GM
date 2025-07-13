@@ -173,19 +173,29 @@
 
         #LogoPrincipal{
             border-radius: 50%;
-           
             width: 155px;
             height: 90px;
         }
+
         #LogoPrincipalMenu{
             border-radius: 50%;
-           
-            width: 555px;
-            height: 350px;
+            width: 335px;
+            height: 190px;
             position: relative;
             left: 1150px;
-            bottom: 315px;
+            bottom: 225px;
+            scale: 1.35;
         }
+
+        #PilaresdoGMLogo{
+            position: relative;
+            left: 1110px;
+            bottom: 25px;
+            scale: 0.85;
+            border: 2px solid white;
+            border-radius: 0.5em;
+        }
+
         #LogoMain{
             height: 125px;
             width: 125px;
@@ -205,7 +215,7 @@
         }
 
         #ObjetivoGM{
-            width: 525px;
+            width: 725px;
             color: white;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             position: relative;
@@ -255,18 +265,46 @@
              font-family: Arial, Helvetica, sans-serif;
              position: absolute;
              left: 10%;
-             font-size: 45px;
+             top: 8%;
+            font-size: 25px;
         }
-        
+        #NossosPilaresTit{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            position: relative;
+            left: 1150px;
+            top: 45px;
+            
+        }
+        #ComoFazemosIssoTitulo{
+            color: white;
+             font-family: Arial, Helvetica, sans-serif;
+             position: absolute;
+             left: 10%;
+             font-size: 25px;
+             top: 48%;
+        }
         #QuemSomosPara{
             width: 500px;
             color: white;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
             position: absolute;
             left: 10%;
             top: 15%;
+            text-align: left;
+        }
+        #ComoFazemosIssoPara{
+            width: 500px;
+            color: white;
+            
+            position: absolute;
+            left: 10%;
+            top: 55%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: 18px;
-            text-align: justify;
+           text-align: left;
         }
         #TituloIntro{
             height: 275px;
@@ -430,26 +468,38 @@
             <h1 id="ObjetivoGM1">LEVANDO O HEMISFÉRIO SUL AO PALCO MUNDIAL DA ASTRONÁUTICA</h1>  
             <h1 id="BemVindoAoGM">Instituto Geração de Marte</h1>
             <p id="ObjetivoGM">
-                Treinando a Geração de Exploradores Espaciais Enquanto Fazemos Ciência
+                No espírito da descoberta e da aventura, acreditamos no poder da exploração do espaço para revelar nosso maior potencial. 
+                Partilhamos a paixão pelo desconhecido e a emoção de empurrar fronteiras.
             </p><br>
             <button id="ParticipeDaMissao">Participe da Missão</button> <button id="SejaUmParceiro">Seja um Parceiro</button>
         </div>
-        <nav id="NavBottomDois">
-            <h3 id="QuemSomosTitulo">Quem somos nós?</h3><br>
-            <p id="QuemSomosPara">
-                No espírito da descoberta e da aventura, acreditamos no poder da exploração do espaço para revelar nosso maior potencial.Partilhamos a paixão pelo desconhecido e a emoção de empurrar fronteiras.
-            </p>
-        </nav>
+        
         <nav id="NavBottom">
             <br><br>
             <h3 id="UmaNovaEraTit">
-                Uma Nova Era para A Exploração Espacial Sul-Americana
-            </h3><br><br><br>
+                Qual é a nossa missão?
+            </h3><br>
             
             <p id="UmaNovaEraDesc">
-                Fundado em 2023 por Juliana Leonet, o Geração de Marte é a primeira comunidade sul-americana dedicada a capacitar e incentivar futuros astronautas cientistas, por meio de missões análogas, pesquisa e educação espacial. Com mais de 300 membros espalhados pelo mundo, estamos rompendo barreiras para garantir que o Hemisfério Sul tenha um papel central na nova era espacial.
+                Nossa missão é dedicada à pesquisa e exploração espacial, trazendo o Hemisfério Sul para o cenário mundial da astronáutica. 
+                Estamos determinados a quebrar barreiras e abrir novos horizontes no campo da ciência e
+                 da exploração espacial no Brasil, nos tornando a 1° Comunidade com essa finalidade na América do Sul.
             </p><img id="LogoPrincipalMenu" alt="Logo do GM" src="{% static 'imagens/LogoGmPng.png' %}" />
             
+        </nav>
+        <nav id="NavBottomDois">
+            <h3 id="QuemSomosTitulo">Quem somos nós?</h3> <h3 id="NossosPilaresTit">Nossos pilares</h3><br>
+            <p id="QuemSomosPara">
+                Fundado em 2023 por Juliana Leonet visando capacitar e incentivar jovens ao desenvolvimento de projetos e pesquisas em astronáutica análoga e civil, através de pesquisas, treinamentos, missões, eventos internos e divulgação de oportunidades na área espacial. 
+                A Geração de Marte visa cooperar com o desenvolvimento da área espacial brasileira, começando do começo, engajando a comunidade científica brasileira. 
+            </p><br>
+            <h3 id="ComoFazemosIssoTitulo">Como fazemos isso?</h3><br>
+            <p id="ComoFazemosIssoPara">
+                Nossas pesquisas e iniciativas irão contribuir para avanços significativos na área espacial, 
+                através da nossa metologia inovadora “Do espaço para a Terra” desenvolvendo soluções em diferentes 
+                modelos e diferentes áreas a fim de fomentar o mercado espacial brasileiro, 
+                não somente desenvolvendo grandes profissionais mas também grandes oportunidades.
+            </p><img id="PilaresdoGMLogo" alt="Pilares do GM" src="{% static 'imagens/PilaresDoGM.png' %}" />
         </nav>
         <nav id="NavBottomTres">
             <div id="Noticias">
