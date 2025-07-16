@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8>">
+        <meta charset="UTF-8">
         <title>GERAÇÃO MARTE</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -10,8 +10,12 @@
     {% load static %}
     <style>
         
-        body {
-    background-image: url("{% static 'imagens/GMBackgroundMenuInicial.png' %}")
+    body {
+        background-image: url("{% static 'imagens/GMBackgroundMenuInicial.png' %}");
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        max-width: 100%;
     }
     #News1{
         height: 413px;
@@ -132,7 +136,8 @@
         #NavTop{
             text-align: center;
             height: 85px;
-            width: 1750px;
+            width: 100%;
+            max-width: 100%;
             display: flex;
             margin-left: auto;
             margin-right: auto;
@@ -141,6 +146,7 @@
             /*border: 3px solid white;*/
             position: relative;
             top: 15px;
+            filter: drop-shadow(1px 1px 1px black);
         }
 
         .ButNavTop{
@@ -381,13 +387,38 @@
             background-image: url("{% static 'imagens/AstronautaRequisitos.jpg' %}");
         }
         #NavBottomCinco{
+          height: 100%;
+            background-color: rgb(9, 9, 37);
+            width: 100%;
+            position: absolute;
+            top: 423%;
+            right:  0%;  
+        }
+        #NavBottomSeis{
+            height: 100%;
+            background-color: rgb(11, 8, 24);
+            width: 100%;
+            position: absolute;
+            top: 523%;
+            right: 0%;
+        }
+        #NavBottomSete{
+            height: 100%;
+            background-color: rgb(17, 29, 48);
+            width: 100%;
+            position: absolute;
+            top: 623%;
+            right: 0%;
+        }
+        #NavBottomOito{
             height: 20%;
             background-color: white;
             width: 100%;
             position: absolute;
-            top: 423%;
+            top: 723%;
             right: 0%;
         }
+        
         #RedesSociaisLink{
             position: absolute;
             left: 75%;
@@ -456,11 +487,161 @@
             color: white;
             text-decoration: none;
         }
+        #ProjetosLogo{
+            height: 395px;
+            width: 395px;
+            position: relative;
+            right: 475px;
+            top: 90px;
+        }
+        #NossosProjetosTitulo{
+            color: white;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #ProjetoTitulo{
+            color: white;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 35px;
+            transition: .4s;
+        }
+        #ConstruindoOFuturoTitulo{
+            color: white;
+            text-align: center;
+            font-family: Arial black;
+            font-size: 35px;
+        }
+        #LogoEDescricaoDosProjetos{
+            height: 650px;
+          
+            width: 1750px;
+            background-color: black;
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px solid black;
+            border-radius: 0.5em;
+            text-align: center;
+            transition: .4s;
+        }
+        #ProjetoDesc{
+            width: 450px;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: left;
+            font-size: 18px;
+            transition: .4s;
+        }
+        #DescricaoProjetos{
+               height: 550px;
+                width: 450px;
+                margin-left: auto;
+                margin-right: auto;
+                position: relative;
+                bottom:  350px;
+                left: 450px;
+                transition: .4s;
+        }
+        #BotoesNPProjetos{
+            width: 450px;
+           
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            bottom: 55px;
+            text-align: center;
+        }
+        #PreviousBut{
+            height:7px;
+            width: 75px;
+            cursor: pointer;
+            background-color: white;
+            border: 1px solid white;
+        }
+        #NextBut{
+            height: 7px;
+            width: 75px;
+            cursor: pointer;
+            background-color: gray;
+            border: 1px solid gray;
+        }
+        #NossoImpactoTitulo{
+            color: white;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #ImpacotoComunidadeTitulo{
+            width: 625px;
+            color: white;
+            text-align: center;
+            font-family: Arial black;
+            font-size: 32px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #NossoImpactoDesc{
+            width:925px;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: relative;
+            font-size: 21px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #NossosParceirosTitulo{
+            color: white;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #ParceirosImages{
+            height: 750px;
+            width: 1450px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            top: 150px;
+            text-align: center;
+        }
+        #Parceiro1{
+            background-color: white;
+            height: 250px;
+            width: 250px;
+            border: 1px solid transparent;
+            border-radius: 0.5em;
+        }
+        #Parceiro2{
+            background-color: white;
+            height: 250px;
+            width: 250px;
+            border: 1px solid transparent;
+            border-radius: 0.5em;
+        }
+        #Parceiro3{
+           background-color: black;
+            height: 250px;
+            width: 250px;
+            border: 1px solid transparent;
+            border-radius: 0.5em; 
+        }
+        #Parceiro4{
+            background-color: white;
+            height: 250px;
+            width: 250px;
+            border: 1px solid transparent;
+            border-radius: 0.5em;
+        }
+        #Parceiro5{
+            background-color: black;
+            height: 250px;
+            width: 250px;
+            border: 1px solid transparent;
+            border-radius: 0.5em;
+        }
     </style>
     <body>
         <nav id="NavTop">
             <img id="LogoPrincipal" alt="Logo do GM" src="{% static 'imagens/LogoGmPng.png' %}" />
-         <button class="ButNavTop" onclick="NewsScroll()">Notícias </button><button class="ButNavTop" onclick="QuemSScroll()">Sobre Nós</button><button class="ButNavTop"><a id="SejaMembro" href="https://forms.gle/fQBGL41wT38kH6pJ8" target="_blank">Seja membro</a></button><button class="ButNavTop">Blog</button><button class="ButNavTop">Nossos Programas</button> <button class="ButNavTop">Pesquisas e publicações</button>
+         <button class="ButNavTop" onclick="NewsScroll()">Notícias </button><button class="ButNavTop" onclick="QuemSScroll()">Sobre Nós</button><button class="ButNavTop"><a id="SejaMembro" href="https://forms.gle/fQBGL41wT38kH6pJ8" target="_blank">Seja membro</a></button><button class="ButNavTop">Blog</button><button class="ButNavTop">Nossos Projetos</button> <button class="ButNavTop">Pesquisas e publicações</button>
          <button class="ButNavTop" onclick="AstroScroll()">Requisitos para ser um astronauta</button>  <button class="ButNavTop" id="LoginBut">Log in</button>
          <button class="ButNavTop" id="SignBut">Sign up</button>
         </nav><br><br>
@@ -593,6 +774,45 @@
             
         </nav>
         <nav id="NavBottomCinco"><br>
+            <h4 id="NossosProjetosTitulo">NOSSOS PROJETOS</h4>
+            <h1 id="ConstruindoOFuturoTitulo">Construindo o Futuro, Um Projeto <br> de Cada Vez</h1>
+            <div id="LogoEDescricaoDosProjetos">
+                <img id="ProjetosLogo" src="{% static 'imagens/ExploraMarteLogo.png' %}">
+                <div id="DescricaoProjetos">
+                <h3 id="ProjetoTitulo">ExploraMarte</h3><br>
+                <p id="ProjetoDesc">O ExploraMarte é uma iniciativa vinculada ao Instituto Geração de Marte que aproxima a ciência espacial do dia a dia das pessoas por meio da Ciência Cidadã.
+                <br><br>O projeto promove campanhas de Caça-Asteroides com o IASC, em parceria com a NASA, e ações de exploração astronômica através da plataforma Zooniverse.<br><br>
+                Com orientação, acesso e propósito, qualquer pessoa, independentemente da formação, pode contribuir com descobertas reais e fazer parte do avanço científico do Brasil rumo ao futuro da exploração espacial.</p>
+                </div>
+            </div>
+            <div id="BotoesNPProjetos">
+                <button id="PreviousBut" onclick="PreviousProject()"></button> <button id="NextBut" onclick="NextProject()"></button>
+            </div>
+        </nav>
+        <nav id="NavBottomSeis">
+            <h4 id="NossoImpactoTitulo">NOSSO IMPACTO</h4><br>
+            <h1 id="ImpacotoComunidadeTitulo">Uma Comunidade Disposta a Mudar o Futuro Da Exploração Espacial</h1><br>
+            <p id="NossoImpactoDesc">
+                O impacto do nosso Instituto está sendo sentido em todo o território brasileiro. 
+                Estamos inspirando uma nova geração de jovens pesquisadores e empreendedores, mostrando-lhes que o céu não é o limite, e o espaço é a nova oportunidade.<br><br>
+
+                Com centenas de membros ao redor do globo, a Geração de Marte já conta com dezenas de artigos desenvolvidos, propostas de soluções em startup 
+                e projetos sociais ao redor do Brasil.
+            </p><br>
+           
+        </nav>
+        <nav id="NavBottomSete">
+            <h4 id="NossosParceirosTitulo">NOSSOS PARCEIROS</h4><br>
+            <div id="ParceirosImages">
+                <img id="Parceiro1" src="{% static 'imagens/guaraLogo.png' %}"> 
+                <img id="Parceiro2" src="{% static 'imagens/habitatMarteLogo.jpg' %}">
+                <img id="Parceiro3" src="{% static 'imagens/MoonDaoLogoJPG.jpg' %}">
+                <img id="Parceiro4" src="{% static 'imagens/BlueOriginLogo.jpg' %}">
+                <img id="Parceiro5" src="{% static 'imagens/SeraLogo.jpg' %}">
+            </div>
+            
+        </nav>
+        <nav id="NavBottomOito"><br>
             <div id="EmailLink">
                 <h2 id="EmailTitulo">E-mail</h2><br>
                 <a id="GMEmail">geracaodemarte@gmail.com</a>
@@ -607,6 +827,48 @@
             </div>
         </nav>
         <script>
+            var novoProjeto = 0;
+            function NextProject(){
+                    document.getElementById("PreviousBut").style.backgroundColor = "gray";
+                    document.getElementById("PreviousBut").style.border = "1px solid gray";
+                    document.getElementById("NextBut").style.backgroundColor = "white";
+                    document.getElementById("NextBut").style.border = "1px solid white";
+                    document.getElementById("ProjetoDesc").innerHTML = "O projeto Trem Sideral é iniciativa vinculada ao Instituto Geração de Marte, que busca levar a ciência espacial às escolas do Cerrado, tornando o conhecimento acessível a crianças, adolescentes e suas famílias. <br><br> As atividades incluem aulas preparatórias para olimpíadas científicas, Campanhas de Caça-Asteroides, lives educativas, observações com telescópio e Aulas Abertas. Com apoio de escolas parceiras , o projeto une ciência, educação e inclusão.";
+                    document.getElementById("ProjetoTitulo").innerHTML = "Trem Sideral";
+                    document.getElementById("ProjetosLogo").src = "{% static 'imagens/TremSideralLogo.png' %}";
+            }
+            function PreviousProject(){
+                    document.getElementById("PreviousBut").style.backgroundColor = "white";
+                    document.getElementById("PreviousBut").style.border = "1px solid white";
+                    document.getElementById("NextBut").style.backgroundColor = "gray";
+                    document.getElementById("NextBut").style.border = "1px solid gray";
+                    document.getElementById("ProjetoDesc").innerHTML = "O ExploraMarte é uma iniciativa vinculada ao Instituto Geração de Marte que aproxima a ciência espacial do dia a dia das pessoas por meio da Ciência Cidadã.<br><br>O projeto promove campanhas de Caça-Asteroides com o IASC, em parceria com a NASA, e ações de exploração astronômica através da plataforma Zooniverse.<br><br>Com orientação, acesso e propósito, qualquer pessoa, independentemente da formação, pode contribuir com descobertas reais e fazer parte do avanço científico do Brasil rumo ao futuro da exploração espacial.";
+                    document.getElementById("ProjetoTitulo").innerHTML = "ExploraMarte";
+                    document.getElementById("ProjetosLogo").src = "{% static 'imagens/ExploraMarteLogo.png' %}";
+            }
+            function ProjetosSlidesShow(){
+                novoProjeto++;
+                if(novoProjeto == 0 || novoProjeto%2 == 0){
+                    document.getElementById("PreviousBut").style.backgroundColor = "white";
+                    document.getElementById("PreviousBut").style.border = "1px solid white";
+                    document.getElementById("NextBut").style.backgroundColor = "gray";
+                    document.getElementById("NextBut").style.border = "1px solid gray";
+                    document.getElementById("ProjetoDesc").innerHTML = "O ExploraMarte é uma iniciativa vinculada ao Instituto Geração de Marte que aproxima a ciência espacial do dia a dia das pessoas por meio da Ciência Cidadã.<br><br>O projeto promove campanhas de Caça-Asteroides com o IASC, em parceria com a NASA, e ações de exploração astronômica através da plataforma Zooniverse.<br><br>Com orientação, acesso e propósito, qualquer pessoa, independentemente da formação, pode contribuir com descobertas reais e fazer parte do avanço científico do Brasil rumo ao futuro da exploração espacial.";
+                    document.getElementById("ProjetoTitulo").innerHTML = "ExploraMarte";
+                    document.getElementById("ProjetosLogo").src = "{% static 'imagens/ExploraMarteLogo.png' %}";
+                }
+                if(novoProjeto%2 != 0){
+                    document.getElementById("PreviousBut").style.backgroundColor = "gray";
+                    document.getElementById("PreviousBut").style.border = "1px solid gray";
+                    document.getElementById("NextBut").style.backgroundColor = "white";
+                    document.getElementById("NextBut").style.border = "1px solid white";
+                    document.getElementById("ProjetoDesc").innerHTML = "O projeto Trem Sideral é iniciativa vinculada ao Instituto Geração de Marte, que busca levar a ciência espacial às escolas do Cerrado, tornando o conhecimento acessível a crianças, adolescentes e suas famílias. <br><br> As atividades incluem aulas preparatórias para olimpíadas científicas, Campanhas de Caça-Asteroides, lives educativas, observações com telescópio e Aulas Abertas. Com apoio de escolas parceiras , o projeto une ciência, educação e inclusão.";
+                    document.getElementById("ProjetoTitulo").innerHTML = "Trem Sideral";
+                    document.getElementById("ProjetosLogo").src = "{% static 'imagens/TremSideralLogo.png' %}";
+                }
+            }
+            setInterval(ProjetosSlidesShow,10000);
+            
             function AstroScroll(){
                  window.scrollTo(0, 2950);
             }
