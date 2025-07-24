@@ -19,6 +19,6 @@ from django.urls import path
 from site_do_gm2 import views
 urlpatterns = [
     path('', views.home, name="home"),
-    
+    path('blog', views.blog, name="blog")
     #path('admin/', admin.site.urls),
 ]

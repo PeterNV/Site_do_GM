@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>GERAÇÃO MARTE</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    {% load static %}
+    <style>
+        
+    body {
+        background-color: black;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+    
+    
+        #NavTop{
+            text-align: center;
+            height: 85px;
+            width: 100%;
+            max-width: 100%;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 25em;
+            background-color: transparent;
+            /*border: 3px solid white;*/
+            position: relative;
+            top: 15px;
+            filter: drop-shadow(1px 1px 1px black);
+        }
+
+        .ButNavTop{
+            background-color: transparent;
+            color: white;
+            font-weight: 550;
+            font-size: 15.5px;
+            position: relative;
+            border-color: transparent;
+            cursor: pointer;
+            margin-left: auto;
+            margin-right: auto;
+            transition-duration: .4s;
+            height: 50px;
+            position: relative;
+            top: 35%;
+            cursor: pointer;
+        }
+        
+        #LoginBut{
+            color: rgb(12, 102, 238);
+        }
+
+        #SignBut{
+            height: 50px;
+            width: 115px;
+            border: 5px solid rgb(12, 102, 238);
+            background-color: rgb(12, 102, 238);
+            border-radius: 0.5em;
+        }
+
+        #LogoPrincipal{
+            border-radius: 50%;
+            width: 155px;
+            height: 90px;
+        }
+
+        #ArtigoDoGMPara{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 65px;
+        }
+
+        
+        #ArtigoDoGM1{
+            color: gray;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: relative;
+            top: 22px;
+            font-size: 18px;
+        }
+        
+        #ProjetosLogo{
+            height: 395px;
+            width: 395px;
+            position: relative;
+            right: 475px;
+            top: 90px;
+        }
+      
+        #TituloIntro{
+             width: 1025px;
+            height: 750px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+    </style>
+    <body>
+        <nav id="NavTop">
+            <img id="LogoPrincipal" alt="Logo do GM" src="{% static 'imagens/LogoGmPng.png' %}" />
+       <button class="ButNavTop" >Sobre Nós</button><button class="ButNavTop">Blog</button><button class="ButNavTop">Nossos Projetos</button> <button class="ButNavTop">Pesquisas e publicações</button>
+         <button class="ButNavTop" >Hackthons</button> <button class="ButNavTop" >Contato</button>  <button class="ButNavTop" id="LoginBut">Log in</button>
+         <button class="ButNavTop" id="SignBut">Sign up</button>
+        </nav><br><br>
+        <div id="TituloIntro">
+            <h1 id="ArtigoDoGM1">ARTIGO - 5 MIN</h1> 
+            <h1 id="ArtigoDoGMPara">Innovations from the Tech Life Flight Mission, the first Brazilian space hackathon</h1>
+            
+            
+        </div>
+        
+        
+        <script>
+          document.getElementById("ArtigoDoGM1").style.color = "green";  
+            
+            
+        </script>
+    </body>
+  
+</html>
